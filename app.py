@@ -135,6 +135,11 @@ with tab1:
         year_built = st.number_input("Year Built", 1872, 2024, 2000)
         year_remod = st.number_input("Year Remodeled", 1872, 2024, 2000)
         
+        # Validation: Year Built must be <= Year Remodeled
+        if year_built > year_remod:
+            st.error(f"⚠️ Invalid: Year Built ({year_built}) cannot be after Year Remodeled ({year_remod})")
+            st.info("💡 A house must be built before it can be remodeled. Please adjust the years.")
+        
     with col2:
         st.markdown("### 📐 Area & Space")
         gr_liv_area = st.number_input("Above Ground Living Area (sq ft)", 300, 6000, 1500)
@@ -177,7 +182,11 @@ with tab1:
     
     # Predict button
     st.markdown("---")
-    if st.button("🔮 Predict House Price", use_container_width=True):
+    
+    # Check if validation passes
+    validation_passed = year_built <= year_remod
+    
+    if st.button("🔮 Predict House Price", use_container_width=True, disabled=not validation_passed):
         with st.spinner("Calculating prediction..."):
             # Prepare input data (simplified version with key features)
             input_data = {
