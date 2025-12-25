@@ -194,6 +194,81 @@ Additional Features:
 
 ---
 
+## 📋 Test Case 6: The "Budget/Distressed" House (Fixer-Upper)
+**Expected Price Range**: $50,000 - $75,000
+
+### Input Values:
+```
+General Information:
+- Overall Quality: 2 (Poor)
+- Overall Condition: 2 (Poor)
+- Year Built: 1910
+- Year Remodeled: 1910 (Never updated)
+
+Area & Space:
+- Above Ground Living Area: 700 sq ft
+- Total Basement Area: 0 sq ft (No basement)
+- First Floor Area: 700 sq ft
+- Second Floor Area: 0 sq ft
+- Lot Area: 3000 sq ft (Small lot)
+
+Rooms & Features:
+- Bedrooms Above Ground: 1
+- Full Bathrooms: 1
+- Half Bathrooms: 0
+- Basement Full Bathrooms: 0
+- Basement Half Bathrooms: 0
+- Garage Car Capacity: 0 (No garage)
+- Garage Area: 0 sq ft
+
+Additional Features:
+- Zoning: RM (Residential Medium Density)
+- Neighborhood: IDOTRR or MeadowV
+- House Style: 1Story
+- Central Air: N (No AC)
+- Kitchen Quality: Fa (Fair)
+- Fireplaces: 0
+```
+
+---
+
+## 📉 How to Get a "Cheap" House Prediction ($63K or Less)
+
+To get a very low price prediction, you need to "stack" several negative factors together. Here is what drives the price down the most:
+
+### 1. **Quality & Condition (The Biggest Factors)**
+Set **Overall Quality** and **Overall Condition** to **2 or 3**. 
+- A house in poor quality with poor maintenance is the fastest way to drop the price.
+
+### 2. **Living Area & Size**
+Houses with less than **800 sq ft** of living area are significantly cheaper. 
+- Set **Above Ground Living Area** to **600 or 700**.
+- Set **Total Basement Area** to **0** (no basement).
+
+### 3. **Neighborhood**
+Some neighborhoods in the dataset are much cheaper than others.
+- Use **MeadowV**, **IDOTRR**, or **BrDale**. 
+- These areas typically have the lowest median prices.
+
+### 4. **Modern Utilities & Amenities**
+- **Central Air**: Set to **N**. Lack of modern AC is a big value dropper.
+- **Garage**: Set **Garage Cars** to **0**. No parking space decreases value.
+- **Kitchen Quality**: Set to **Fa** (Fair).
+
+### 5. **Age & Remodeling**
+- Choose an old **Year Built** (e.g., 1920) and **never remodel it** (set Year Remodeled to the same year). 
+- An old house that has never been updated is much less valuable.
+
+### Summary Checklist for a "Cheap" House:
+- ❌ **Low Quality/Condition** (2-3)
+- ❌ **Small Size** (< 800 sq ft)
+- ❌ **No Basement**
+- ❌ **No Garage**
+- ❌ **No Central Air**
+- ❌ **Poor Neighborhood** (IDOTRR/MeadowV)
+
+---
+
 ## 🎯 How to Use These Test Cases
 
 ### For Demonstration:
